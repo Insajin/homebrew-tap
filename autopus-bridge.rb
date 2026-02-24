@@ -5,21 +5,21 @@
 class AutopusBridge < Formula
   desc "Autopus Local Agent Bridge - Connect local development agents to Autopus platform"
   homepage "https://github.com/insajin/autopus-bridge"
-  version "1.3.0"
+  version "1.3.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Insajin/autopus-bridge/releases/download/v1.3.0/autopus-bridge_1.3.0_darwin_amd64.tar.gz"
-      sha256 "5e77ca8b646dc5cefaae303a99a72a15478147ec4594ef498735f58d1c434d5b"
+      url "https://github.com/Insajin/autopus-bridge/releases/download/v1.3.1/autopus-bridge_1.3.1_darwin_amd64.tar.gz"
+      sha256 "d7c574517d909c7f5ec3cb28bdda5a275a612aedb2ebe125e2588033ab837d7e"
 
       define_method(:install) do
         bin.install "autopus-bridge"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Insajin/autopus-bridge/releases/download/v1.3.0/autopus-bridge_1.3.0_darwin_arm64.tar.gz"
-      sha256 "86dc14b7b7efef40cc7a5584b9bc8e654c138f0a8058d75fd5e7c5fd5042fcca"
+      url "https://github.com/Insajin/autopus-bridge/releases/download/v1.3.1/autopus-bridge_1.3.1_darwin_arm64.tar.gz"
+      sha256 "720fc82ed4926d3c4be48391bdeb6858e609d0bf192a3183e7002ff11adb1c14"
 
       define_method(:install) do
         bin.install "autopus-bridge"
@@ -29,15 +29,15 @@ class AutopusBridge < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Insajin/autopus-bridge/releases/download/v1.3.0/autopus-bridge_1.3.0_linux_amd64.tar.gz"
-      sha256 "ec7643c840e634e839e9d4f63c63394ade077010c8645cc38e1bb494a7b0221a"
+      url "https://github.com/Insajin/autopus-bridge/releases/download/v1.3.1/autopus-bridge_1.3.1_linux_amd64.tar.gz"
+      sha256 "98376b2524414c52a24bfc059afda7087657dac43f1b0477a4bc55601bbd5d41"
       define_method(:install) do
         bin.install "autopus-bridge"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Insajin/autopus-bridge/releases/download/v1.3.0/autopus-bridge_1.3.0_linux_arm64.tar.gz"
-      sha256 "8df2b84b1b004a70864d038b3f0b8cb4f5e2822a79ceec6939b9bdbd79387a4c"
+      url "https://github.com/Insajin/autopus-bridge/releases/download/v1.3.1/autopus-bridge_1.3.1_linux_arm64.tar.gz"
+      sha256 "4133235bca3204949c3c7f613331d6c62f4312e5fc437ee3230abcf6bd8128f3"
       define_method(:install) do
         bin.install "autopus-bridge"
       end
