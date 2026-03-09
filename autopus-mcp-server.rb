@@ -5,21 +5,21 @@
 class AutopusMcpServer < Formula
   desc "Autopus MCP Server - Claude Code MCP plugin for Autopus platform integration"
   homepage "https://github.com/insajin/autopus-bridge"
-  version "1.15.3"
+  version "1.16.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Insajin/autopus-bridge/releases/download/v1.15.3/autopus-mcp-server_1.15.3_darwin_amd64.tar.gz"
-      sha256 "7d8451ed7b6ab487247a60a5ca235a141d83d7bce674d1c646a3a72e138e1c42"
+      url "https://github.com/Insajin/autopus-bridge/releases/download/v1.16.0/autopus-mcp-server_1.16.0_darwin_amd64.tar.gz"
+      sha256 "932e340645d6059019579e85f6f3b79dd7cf7c14d8f41ee3c6d4743e0fb6757b"
 
       define_method(:install) do
         bin.install "autopus-mcp-server"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Insajin/autopus-bridge/releases/download/v1.15.3/autopus-mcp-server_1.15.3_darwin_arm64.tar.gz"
-      sha256 "35a274f731040e3b0a15544755b0bdb5054920aba9e383d67b1fbb1d20a75e01"
+      url "https://github.com/Insajin/autopus-bridge/releases/download/v1.16.0/autopus-mcp-server_1.16.0_darwin_arm64.tar.gz"
+      sha256 "5806ab2233d1678c47a6e232872700bdeb24774e715cb33b70a5c03ead45a586"
 
       define_method(:install) do
         bin.install "autopus-mcp-server"
@@ -29,15 +29,15 @@ class AutopusMcpServer < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Insajin/autopus-bridge/releases/download/v1.15.3/autopus-mcp-server_1.15.3_linux_amd64.tar.gz"
-      sha256 "693e448cfc4e72feccd90e7b08dd7613ac07916f46cd6565dd2253f07e53d346"
+      url "https://github.com/Insajin/autopus-bridge/releases/download/v1.16.0/autopus-mcp-server_1.16.0_linux_amd64.tar.gz"
+      sha256 "a9d344d4d5f37ced8708c5325350a60b31c0892e92943bb26572e221e1e890ae"
       define_method(:install) do
         bin.install "autopus-mcp-server"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Insajin/autopus-bridge/releases/download/v1.15.3/autopus-mcp-server_1.15.3_linux_arm64.tar.gz"
-      sha256 "c05dfb022efd9863de83d2c88b282085ace7be30217c855e96c524e4113d3cd1"
+      url "https://github.com/Insajin/autopus-bridge/releases/download/v1.16.0/autopus-mcp-server_1.16.0_linux_arm64.tar.gz"
+      sha256 "eee670ceb644bde504e0857d31f54dac4eeebdeb31d00d3bddb28e9e9652f63d"
       define_method(:install) do
         bin.install "autopus-mcp-server"
       end
