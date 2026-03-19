@@ -3,7 +3,7 @@ cask "autopus-bridge" do
   name "autopus-bridge"
   desc "Autopus Local Agent Bridge - Connect local development agents to Autopus platform"
   homepage "https://github.com/insajin/autopus-bridge"
-  version "1.27.3"
+  version "1.27.4"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "autopus-bridge" do
   on_macos do
     on_intel do
       url "https://github.com/Insajin/autopus-bridge/releases/download/v#{version}/autopus-bridge_#{version}_darwin_amd64.tar.gz"
-      sha256 "b281a0e0ac95cdcaafdb81311fc6c41d18a3fe547fd2d63c7880fc21fca007ff"
+      sha256 "751a30f624032a0082b0e7f6036d4c02718bf60081a67a02a81c9e374e4d32b9"
     end
     on_arm do
       url "https://github.com/Insajin/autopus-bridge/releases/download/v#{version}/autopus-bridge_#{version}_darwin_arm64.tar.gz"
-      sha256 "d9d5059a4f55e0fe2fc4103f7b23407c2ac7b9ebac601be0ca9d0abc13282bfc"
+      sha256 "20f533b0d81242e8ef5d10b7a9a92b9f303f1133e9cb9eebad409ac102ff280b"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/Insajin/autopus-bridge/releases/download/v#{version}/autopus-bridge_#{version}_linux_amd64.tar.gz"
-      sha256 "918b136ec70d7215b82e7e66e5946ed7f949397e66ff730f671db664da68bcf3"
+      sha256 "b6be65f4dc224b9c89f1bde8b77b4084237188fbf8a5ea93534219364ac5aa2c"
     end
     on_arm do
       url "https://github.com/Insajin/autopus-bridge/releases/download/v#{version}/autopus-bridge_#{version}_linux_arm64.tar.gz"
-      sha256 "53c9c8275d21d62c7b85eab3e14fe541cd0a1f3522891b423d9e7710b28d932d"
+      sha256 "3d15c4f2a1419f329fb88786252045f080b9190c18acabeb8b118dcde7260d3f"
     end
   end
 
