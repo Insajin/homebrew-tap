@@ -3,35 +3,41 @@ cask "autopus-mcp-server" do
   name "autopus-mcp-server"
   desc "Autopus MCP Server - Claude Code MCP plugin for Autopus platform integration"
   homepage "https://github.com/insajin/autopus-bridge"
-  version "1.29.1"
+  version "1.30.0"
+
   livecheck do
     skip "Auto-generated on release."
   end
+
   binary "autopus-mcp-server"
+
   on_macos do
     on_intel do
       url "https://github.com/Insajin/autopus-bridge/releases/download/v#{version}/autopus-mcp-server_#{version}_darwin_amd64.tar.gz"
-      sha256 "d6d28f43037fb4bf1376ccf49dc9db586684d6ab719b7bad5ea720b055e471d3"
+      sha256 "976e7b3e0ec901fac688ef95dbcf4f759bcd03272514392149d91c9b517eddad"
     end
     on_arm do
       url "https://github.com/Insajin/autopus-bridge/releases/download/v#{version}/autopus-mcp-server_#{version}_darwin_arm64.tar.gz"
-      sha256 "891b38d3b8a8cc4ea4cdd9f1d6dbab23c5613ef954976a11d81f811c4e9c5ab8"
+      sha256 "93bf3b67401d28478e7606a47dce13d6e95a975d241039c31f311474232dcf49"
     end
   end
+
   on_linux do
     on_intel do
       url "https://github.com/Insajin/autopus-bridge/releases/download/v#{version}/autopus-mcp-server_#{version}_linux_amd64.tar.gz"
-      sha256 "e9585cdd514a52f7ccea38d113a0e06392b26f1b4033302053419080fc0c562a"
+      sha256 "e030ff5f356f3f2d5bdfd8984d8e200c72295a186cbe063ae6460554278037d3"
     end
     on_arm do
       url "https://github.com/Insajin/autopus-bridge/releases/download/v#{version}/autopus-mcp-server_#{version}_linux_arm64.tar.gz"
-      sha256 "020222045465d1fa58ab8b20eaddc0c38e2f1986012b15bf5670eddee8d761fd"
+      sha256 "25bf2b164d13cc9eed9b09491b144cd97cac14e50f5e536f5d143210456ad016"
     end
   end
+
   postflight do
     if OS.mac?
       system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/autopus-mcp-server"]
     end
   end
+
   # No zap stanza required
 end
