@@ -1,7 +1,7 @@
 class AutopusAdk < Formula
   desc "Agentic Development Kit for coding CLIs"
   homepage "https://github.com/Insajin/autopus-adk"
-  version "0.43.0"
+  version "0.44.1"
   license "MIT"
 
   livecheck do
@@ -12,20 +12,20 @@ class AutopusAdk < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/Insajin/autopus-adk/releases/download/v#{version}/autopus-adk_#{version}_darwin_amd64.tar.gz"
-      sha256 "6196b67ee40c532dc0fba65668a981b518e1efea179a666d630c395db52d842b"
+      sha256 "b341b9dcd152bb4481f1210c54723510c171de8846e37242133a108e48add68b"
     else
       url "https://github.com/Insajin/autopus-adk/releases/download/v#{version}/autopus-adk_#{version}_darwin_arm64.tar.gz"
-      sha256 "5f4677dec0ba07e1f6b04d908f749bf6308ad96e8ce4646e6530fd81ef2b235e"
+      sha256 "bc2ab0ff54da5f4dd36d4101dfcd418b50ec60d3243a097a8132761477266d33"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/Insajin/autopus-adk/releases/download/v#{version}/autopus-adk_#{version}_linux_amd64.tar.gz"
-      sha256 "294be27d432f3b58b29819eb7195848ff11ea4a6a645541600ee06c4db7db144"
+      sha256 "e19eb1f9e3a28c15b4aa65f065ae720b35bbc31be13c94ef02b8e09fb8680b3b"
     else
       url "https://github.com/Insajin/autopus-adk/releases/download/v#{version}/autopus-adk_#{version}_linux_arm64.tar.gz"
-      sha256 "070fa1c09a3c2b9c148af429e4976d82149e991122a637942e683aa95ae6a51c"
+      sha256 "20d3540da7c72f17fc58e8ce51681075222afac30becaa29b1f1b010e63b669b"
     end
   end
 
